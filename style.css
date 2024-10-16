@@ -1,0 +1,120 @@
+:root {
+    --baseColor: #606468;
+    --htmlFontSize: 100%;
+    --bodyBackgroundColor: #2c3338;
+    --bodyColor: var(--baseColor);
+    --bodyFontFamily: "Open Sans", sans-serif;
+    --bodyFontSize: 0.875rem;
+    --bodyFontWeight: 400;
+    --bodyLineHeight: 1.5;
+    --anchorColor: #eee;
+    --formGap: 0.875rem;
+    --loginBorderRadus: 0.25rem;
+    --loginInputBackgroundColor: #3b4148;
+    --loginInputHoverBackgroundColor: #434a52;
+    --loginSubmitBackgroundColor: #ea4c88;
+    --loginSubmitColor: #eee;
+    --loginSubmitHoverBackgroundColor: #d44179;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: var(--htmlFontSize);
+}
+
+body {
+    background-color: #342d34;
+    color: white;
+    font-family: var(--bodyFontFamily);
+    font-size: var(--bodyFontSize);
+    font-weight: var(--bodyFontWeight);
+    line-height: var(--bodyLineHeight);
+    margin: 0;
+    min-block-size: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+a {
+    color: var(--anchorColor);
+    outline: 0;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    text-decoration: underline;
+}
+
+.grid {
+    inline-size: 90%;
+    margin-inline: auto;
+    max-inline-size: 20rem;
+    display: grid;
+}
+
+.hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.icon {
+    block-size: 1em;
+    display: inline-block;
+    fill: var(--iconFill);
+    inline-size: 1em;
+    vertical-align: middle;
+}
+
+input,
+textarea,
+select,
+option,
+input[type="submit"] {
+    background-color: var(--loginInputBackgroundColor);
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    padding: 1rem;
+    transition: background-color 0.3s;
+    border-radius: var(--loginBorderRadus);
+    inline-size: 100%;
+}
+
+input[type="submit"] {
+    background-color: #d75821;
+    color: var(--loginSubmitColor);
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+    background-color: #d75821;
+}
+
+textarea:focus,
+textarea:hover {
+    background-color: var(--loginInputHoverBackgroundColor);
+}
+
+p {
+    margin-block: 1.5rem;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
