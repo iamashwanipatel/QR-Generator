@@ -28,13 +28,14 @@
 
     <script type="text/javascript">
         function genQR() {
-            var gapi = "https://quickchart.io/chart?cht=qr&chs=300x300&chl=";
-            var myimg = document.getElementById("img");
-            var mytext = document.getElementById("qrtext").value;
-            var mysize = document.getElementById("size").value;
+            const gapi = "https://quickchart.io/chart?cht=qr&chs=";
+            const myimg = document.getElementById("img");
+            const mytext = document.getElementById("qrtext").value;
+            const mysize = document.getElementById("size").value;
 
             if (mytext !== "") {
-                myimg.src = gapi + mysize + "x" + mysize + "&chl=" + mytext;
+                myimg.src = gapi + mysize + "&chl=" + encodeURIComponent(mytext);
+                myimg.alt = "QR Code for " + mytext;
             } else {
                 alert("Please Enter Text");
             }
